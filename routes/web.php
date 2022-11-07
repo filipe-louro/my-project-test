@@ -20,14 +20,14 @@ Route::get('/', function () {
 
 //create
 Route::get('/posts/create', [PostController::class, 'create'])->middleware('auth');
-Route::post('/posts/create', [PostController::class, 'store']);
+Route::post('/posts/create', [PostController::class, 'store'])->middleware('auth');
 
 //show
 Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::get('/', [PostController::class, 'index']);
 
 //delete
-Route::delete('/posts/show', [PostController::class, 'destroy']);
+Route::delete('/posts/show', [PostController::class, 'destroy'])->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
