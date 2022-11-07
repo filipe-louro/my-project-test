@@ -5,12 +5,12 @@
 <div class="mt-4 col-md-10 offset-md-1">
     <div class="row">
         <div id="info-container" class="col-md-6">
-            <p>Título: {{$post->title}}</p>
+            <p>Título: {{$post[$key]->title}}</p>
         </div>
     </div>
     <div>
         <div>
-            <p class="col-md-12">Descrição: {!! $post->description !!}</p>
+            <p class="col-md-12">Descrição: {!! $post[$key]->description !!}</p>
         </div>
     </div>
 </div>

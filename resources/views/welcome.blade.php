@@ -133,7 +133,7 @@
                     Seção de Postagem e Comentários:
                 </div>
             </div>
-            @foreach($posts as $post)
+            @foreach($posts as $key => $post)
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
