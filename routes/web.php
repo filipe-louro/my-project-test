@@ -27,7 +27,7 @@ Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::get('/', [PostController::class, 'index']);
 
 //delete
-Route::delete('/posts/show', [PostController::class, 'destroy'])->middleware('auth');
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

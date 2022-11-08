@@ -13,9 +13,12 @@ class PostTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_if_any_user_can_see_post_in_home()
     {
-        $response = $this->get('/');
+        $response = $this->get('/',[
+            'title' => 'Publicação de Teste',
+            'description' => 'Descrição de teste.'
+        ]);
 
         $response->assertStatus(200);
     }
